@@ -23,10 +23,11 @@ int main() {
     
     return 0;
 }
+```
 ## OUTPUT
 
-Result after left shifting 44 by 3 positions: 352
-```
+![Screenshot 2025-04-27 150827](https://github.com/user-attachments/assets/aa083b19-3f1e-4bc4-b7fe-1358878ece5a)
+
 ## RESULT
 Thus the program to perform the basic left shift operation for 44 integer number with 3 shifts has been executed successfully.
 
@@ -70,14 +71,13 @@ int main() {
     
     return 0;
 }
+```
 ## OUTPUT
 
-Enter two numbers: 5 5
-Both numbers are equal.
+![Screenshot 2025-04-27 150934](https://github.com/user-attachments/assets/f0a4eb67-07f3-4e4b-82e0-4aed7d92b2c0)
 
-Enter two numbers: 10 20
-Both numbers are not equal.
-```
+![Screenshot 2025-04-27 151013](https://github.com/user-attachments/assets/e10fc626-1e6b-419e-b0b2-ba87ef754abe)
+
            
 ## RESULT
 
@@ -100,31 +100,35 @@ Write a C Program to convert the given string into lowercase.
 ## PROGRAM
 ```
 #include <stdio.h>
-#include <ctype.h>
+#include <ctype.h> 
+
+void toLowerCase(char *str) {
+    int i = 0;
+    while (str[i] != '\0') {
+        str[i] = tolower(str[i]); 
+        i++;
+    }
+}
 
 int main() {
     char str[100];
-    int i;
-    
+
     printf("Enter a string: ");
-    gets(str);
-    
-    for (i = 0; str[i] != '\0'; i++) {
-        str[i] = tolower(str[i]);
-    }
-    
-    printf("String in lowercase: %s\n", str);
-    
+    fgets(str, sizeof(str), stdin); 
+
+    toLowerCase(str);
+
+    printf("Lowercase string: %s\n", str);
+
     return 0;
 }
-
-## OUTPUT
-Enter a string: Hello World
-String in lowercase: hello world
-
-Enter a string: C PROGRAMMING
-String in lowercase: c programming
 ```
+## OUTPUT
+
+![Screenshot 2025-04-27 151506](https://github.com/user-attachments/assets/ceb023aa-5dbb-4d78-ae93-a7872708de48)
+
+![Screenshot 2025-04-27 151713](https://github.com/user-attachments/assets/ac970137-ea27-4c2f-8c95-4e5e24a3f376)
+
 
 ## RESULT
 Thus the program to convert the given string into lowercase has been executed successfully
@@ -166,13 +170,13 @@ int main() {
     
     return 0;
 }
-## OUTPUT
-Enter a string: Hello World
-Total number of words: 2
-
-Enter a string: Welcome to C Programming
-Total number of words: 4
 ```
+## OUTPUT
+
+![Screenshot 2025-04-27 151834](https://github.com/user-attachments/assets/9551f7da-7ee1-4469-b534-b7c585161618)
+
+![Screenshot 2025-04-27 151953](https://github.com/user-attachments/assets/06597e47-8a11-419e-a0eb-2747499efc22)
+
 ## RESULT
 Thus the program to count the total number of words in a given string using do While loop has been executed successfully
  
@@ -210,7 +214,7 @@ int main() {
     printf("Enter the first string: ");
     scanf("%[^\n]", c1);
     
-    getchar(); // to consume the leftover newline character
+    getchar();
 
     printf("Enter the second string: ");
     scanf("%s", c2);
@@ -235,15 +239,14 @@ int main() {
     
     return 0;
 }
-## OUTPUT
-Enter the first string: Hello
-Enter the second string: Hello
-Strings are same.
-
-Enter the first string: Hello World
-Enter the second string: Hello
-Strings are not same.
 ```
+## OUTPUT
+
+![Screenshot 2025-04-27 152152](https://github.com/user-attachments/assets/11758cbb-aed0-4b7a-9a70-93741abe4aec)
+
+![Screenshot 2025-04-27 152246](https://github.com/user-attachments/assets/da41c8d2-73d3-4f5e-ae2d-6a62bec059b5)
+
+
 ## RESULT
 Thus the C Program to compare two strings without using strcmp() has been executed successfully.
 
